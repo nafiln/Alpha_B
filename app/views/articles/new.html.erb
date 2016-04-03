@@ -1,5 +1,14 @@
 <h1> Hey this is the path of new articles</h1>
 
+<!-- Displaying the errors / Validation on the screen (Because it's the templet & its require to render the errors to communicate with the controller) -->
+<% if @article.errors.any? %>
+<p> Error due to :- </p>
+<ul>
+<% @article.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<%end%>
+</ul>
+<%end%>
  
 <%= form_for @article do |f| %>
 <!-- Creating the Title Name (Label + Text Field ) -->
