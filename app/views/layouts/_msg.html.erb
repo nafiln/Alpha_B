@@ -1,0 +1,6 @@
+<!-- This rendering of displaying messages is here (applicaton.html.erb) because it has to show in all the templets that's going to be created (So it should apply to all) -->
+<% flash.each do |name, msg| %>
+ <ul>
+  <li><%= msg%></li>
+ </ul>
+ <% end %>

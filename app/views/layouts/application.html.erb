@@ -2,18 +2,12 @@
 <html>
 <head>
   <title>AlphaB</title>
-  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag'default', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<!-- This rendering of displaying messages is here (applicaton.html.erb) because it has to show in all the templets that's going to be created (So it should apply to all) -->
-<% flash.each do |name, msg| %>
- <ul>
-  <li><%= msg%></li>
- </ul>
- <% end %>
-
+<%= render 'layouts/msg' %>
 <%= yield %>
 
 </body>
