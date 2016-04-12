@@ -1,15 +1,8 @@
 
-<!-- Displaying the errors / Validation on the screen (Because it's the templet & its require to render the errors to communicate with the controller) -->
-<% if @article.errors.any? %>
-<p> Error due to :- </p>
-<ul>
-<% @article.errors.full_messages.each do |msg| %>
-<li><%= msg %></li>
-<%end%>
-</ul>
-<%end%>
+<%= render 'shared/errors', obj: @article %>
 
 
+ 
 <div class='row'>
   <div class='col-xs-12'>
 
