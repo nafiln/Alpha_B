@@ -22,6 +22,17 @@
     <td><%= article.id %></td>
     <td align="center"><%= article.title %></td>
     <td align="center"><%= article.description %></td>
+    <td align='center'>
+    <small> created by: <%= article.user.username if article.user %>,
+            <%= article.created_at %> ago 
+    </small>
+    </td>
+    <td align="center">        
+    <small>      
+            last update: <%= article.updated_at %>
+    </small>
+    </td>
+
     <!-- (article) it defines the parameter used in the do statment which is for indavidule value of the queue -->
     <td align="center"> <%= link_to 'Edit', edit_article_path(article) %></td>
     <td align="center"> <%= link_to 'Show', article_path(article) %></td>
